@@ -1,4 +1,4 @@
-Dekoratörler:
+# Dekoratörler:
 Dekoratörler, kapsamasını istediğimiz fonksiyonların üzerine, önünde @ karakteri konularak yazılır. Buna pie syntax denir. Aslında bu yazım stili sadece bir kısayoldan ibarettir.
 ÖRNEK:
 Yöntem 1:
@@ -32,7 +32,7 @@ func()
 
 Bir dekoratör kullanıldığında, kullanılan fonksiyon dekoratöre parametre olarak düşer. Dekoratör içinde bir kapsayıcı (wrapper) iç fonksiyon oluşturur ve asıl fonksiyona gelen parametreleri bununla yakalarız. Dilediğimiz işlemleri yaptıktan sonra iç fonksiyondan, parametre olarak gelen asıl fonksiyondan dönen değeri, dekoratörden ise iç fonksiyonun kendisini geriye döndürürüz.
 
-Parametreli Dekoratörler:
+# Parametreli Dekoratörler:
 Bildiğiniz üzere dekoratörlere parametre de verebiliyoruz. Örneğin aşağıda Flask frameworkten bir view görüyorsunuz.
 ÖRNEK:
 from flask import Flask, render_template
@@ -48,7 +48,7 @@ Anasayfayı görüntülemek için home isimli bir view yazılmış ve route deko
 
 Parametreli dekoratörlerde, iç fonksiyon (wrapper) parametreyi alacak ek bir iç fonksiyon (decorator) içine alınır.
 
-Zincirleme Dekoratörler:
+# Zincirleme Dekoratörler:
 Dekotörler uç uca eklenebilirler. Diğer bir deyişle, bir fonksiyon üzerinde birden fazla dekoratör kullanabilirsiniz. Örneğin, aşağıdaki gibi yazdığımız @benchmark ve @has_permission dekoratörlerinin ikisi birden kullanabiliriz.
 ÖRNEK:
 @benchmark
@@ -84,7 +84,7 @@ def has_permission(permission):
 
     return decorator
 
-Sınıfları Dekoratör Olarak Kullanmak:
+# Sınıfları Dekoratör Olarak Kullanmak:
 Önceki örneklerde sadece fonksiyonları dekoratör oluşturmak için kullandık. Ancak sınıfları ve onların __call__ sihirli fonksiyonlarını kullanarak da dekoratör oluşturabiliriz. Bu fonksiyon, bir sınıfa callable gibi davranıldığında yani fonksiyon gibi çalıştırıldığında çalışır. Dekoratör parametresini almak için __init__ sihirli fonksiyonunu kullanacağız. Bu fonksiyon bildiğiniz üzere sınıf ilk defa oluşturulduğunda çalışır.
 ÖRNEK:
 class sleep:
@@ -113,7 +113,7 @@ def hello(name):
 hello('World')
 hello('Umut')
 
-Dekoratörleri Sınıflar Üzerinde Kullanmak:
+# Dekoratörleri Sınıflar Üzerinde Kullanmak:
 Önceki örneklerde dekoratörleri hep fonksiyonlar üzerinde kullandık. Ancak sınıflar da birer çağrılabilir (callable) olduğu için elbette onlar üzerinde de kullanabiliriz.
 
 Örneğin, oluşturduğumuz @benchmark ve @sleep dekoratörlerini yine oluşturduğumuz User sınıfı üzerinde kullanalım.
