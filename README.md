@@ -1,12 +1,12 @@
 Dekoratörler:
 Dekoratörler, kapsamasını istediğimiz fonksiyonların üzerine, önünde @ karakteri konularak yazılır. Buna pie syntax denir. Aslında bu yazım stili sadece bir kısayoldan ibarettir.
 ÖRNEK:
-# Yöntem 1:
+Yöntem 1:
 @decorator
 def func():
     pass
 
-# Yöntem 2:
+Yöntem 2:
 def func():
     pass
     
